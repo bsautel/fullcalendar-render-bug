@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const calendar = new Calendar(calendarElement, {
         plugins: [timeGridPlugin, bootstrapPlugin],
         themeSystem: 'bootstrap',
-        viewSkeletonRender() {
+        datesRender() {
             renderIcon(calendarElement, faChevronLeft);
             renderIcon(calendarElement, faChevronRight);
         }
