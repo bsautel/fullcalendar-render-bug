@@ -20,7 +20,15 @@ document.addEventListener('DOMContentLoaded', function () {
         viewSkeletonRender() {
             renderIcon(calendarElement, faChevronLeft);
             renderIcon(calendarElement, faChevronRight);
-        }
+        },
+        eventSources: [
+            () => {
+                return new Promise(resolve => {
+                    let event = {start: new Date(), title: 'hello'};
+                    setTimeout(() => resolve([event]), 1000);
+                })
+            }
+        ]
     });
 
     calendar.render();
