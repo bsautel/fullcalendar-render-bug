@@ -1,10 +1,10 @@
 import {Calendar} from '@fullcalendar/core';
-import dayGridPlugin from '@fullcalendar/daygrid';
+import timeGridPlugin from '@fullcalendar/timegrid';
 import bootstrapPlugin from '@fullcalendar/bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import '@fullcalendar/core/main.css';
-import '@fullcalendar/daygrid/main.css';
+import '@fullcalendar/timegrid/main.css';
 import '@fullcalendar/bootstrap/main.css';
 import {faChevronLeft, faChevronRight} from "@fortawesome/free-solid-svg-icons";
 import {icon} from "@fortawesome/fontawesome-svg-core";
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
     body.appendChild(calendarElement);
 
     const calendar = new Calendar(calendarElement, {
-        plugins: [dayGridPlugin, bootstrapPlugin],
+        plugins: [timeGridPlugin, bootstrapPlugin],
         themeSystem: 'bootstrap',
         viewSkeletonRender() {
             renderIcon(calendarElement, faChevronLeft);
